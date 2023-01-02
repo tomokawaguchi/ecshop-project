@@ -1,0 +1,15 @@
+@import "../../assets/styles/mixins.scss";
+@import "../../assets/styles/palette.scss";
+
+.ShoppingBagList {
+	@include flex(0 1 920px);
+	@include displayFlex(unset, unset);
+	flex-direction: column;
+	padding-right: 30px;
+
+	@include mediaQuery("max", 1120px) {
+		@include flex(100%);
+		margin-bottom: 80px;
+		padding-right: 0;
+	}
+}

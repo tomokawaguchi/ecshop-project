@@ -1,0 +1,75 @@
+@import "../../assets/styles/mixins.scss";
+@import "../../assets/styles/palette.scss";
+
+.Nav {
+	@include displayFlex(unset, center);
+
+	&_Link {
+		@include transitionEffect(0.3s);
+		@include displayFlex(center, center);
+		font-size: 18px;
+		text-decoration: none;
+		color: $textBlack;
+		margin: 0 10px;
+
+		&_Active {
+			position: relative;
+
+			&:after {
+				content: "";
+				position: absolute;
+				right: -3px;
+				top: 3px;
+				border-radius: 100%;
+				background-color: $purple;
+				width: 10px;
+				height: 10px;
+			}
+		}
+
+		&_Icon {
+			font-size: 24px;
+		}
+
+		@include onHoverFocus {
+			color: $purple;
+		}
+
+		@include mediaQuery("max", 580px) {
+			margin: 0 7px;
+
+			&_Text {
+				display: none;
+			}
+		}
+	}
+
+	&_Hamburger {
+		@include displayFlex(center, center);
+		display: none;
+		font-size: 22px;
+		color: $textBlack;
+		border: none;
+		background-color: transparent;
+		padding: 0;
+		margin-left: 10px;
+
+		@include mediaQuery("max", 580px) {
+			display: flex;
+		}
+	}
+}
+
+.Mobile {
+	display: none;
+
+	// @include mediaQuery("max", 580px) {
+	// 	@include displayFlex(unset, unset);
+	// 	position: absolute;
+	// 	width: 50%;
+	// 	right: 0;
+	// 	top: 0;
+	// 	bottom: 0;
+	// 	z-index: 1;
+	// }
+}

@@ -1,0 +1,63 @@
+@import "../../assets/styles/mixins.scss";
+@import "../../assets/styles/palette.scss";
+
+.Header {
+	position: relative;
+	padding: 0 96px;
+	z-index: 0;
+	box-shadow: 0 0 7px 4px rgba(0, 0, 0, 0.2);
+
+	> div {
+		@include displayFlex(space-between, center);
+		max-width: 1440px;
+		padding: 20px 0;
+		margin: 0 auto;
+	}
+
+	&_Logo {
+		@include transitionEffect(0.3s);
+		font-family: "Delius Swash Caps", cursive;
+		font-size: 22px;
+		text-decoration: none;
+		color: $purple;
+		max-width: 80px;
+
+		@include onHoverFocus {
+			color: $lightPurple;
+		}
+	}
+
+	@include mediaQuery("max", 860px) {
+		padding: 0 48px;
+	}
+	@include mediaQuery("max", 580px) {
+		padding: 0 24px;
+	}
+}
+
+.SaleBelt {
+	justify-content: center !important;
+	color: $textWhite;
+	padding: 0 !important;
+
+	&:before {
+		content: "";
+		position: absolute;
+		background-color: $purple;
+		left: 0;
+		right: 0;
+		top: 0;
+		height: 40px;
+		z-index: -1;
+	}
+
+	> p {
+		margin: 10px 0;
+	}
+
+	@include mediaQuery("max", 580px) {
+		> p {
+			font-size: 14px;
+		}
+	}
+}

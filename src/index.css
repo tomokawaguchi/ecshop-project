@@ -1,0 +1,20 @@
+body {
+	position: relative;
+	font-family: "Delius", cursive;
+	font-size: 16px;
+	box-sizing: border-box;
+	padding: 0;
+	margin: 0;
+}
+body.isMobileActive {
+	overflow-y: hidden;
+}
+body.isMobileActive:after {
+	content: "";
+	position: absolute;
+	left: 0;
+	right: 0;
+	top: 0;
+	bottom: 0;
+	background-color: rgba(0, 0, 0, 0.4);
+}

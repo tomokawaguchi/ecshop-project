@@ -1,0 +1,56 @@
+@import "../../assets/styles/mixins.scss";
+@import "../../assets/styles/palette.scss";
+
+.Product {
+	@include transitionEffect(0.3s);
+	@include flex(0 0 23%);
+	border-radius: 5px;
+	box-shadow: 0 0 7px 4px rgba(0, 0, 0, 0.15);
+
+	&_Link {
+		text-decoration: none;
+		color: $textBlack;
+		cursor: pointer;
+	}
+
+	&_Thumbnail {
+		border-top-left-radius: 5px;
+		border-top-right-radius: 5px;
+		width: 100%;
+	}
+
+	&_BottomWrapper {
+		@include displayFlex(unset, unset);
+		flex-direction: column;
+		padding: 5px 10px;
+	}
+	&_HeartButton {
+		display: inline-flex;
+		align-self: flex-end;
+		background-color: transparent;
+		border: none;
+		height: 30px;
+		padding: 0;
+		margin-top: 10px;
+		margin-bottom: 20px;
+	}
+	&_Icon {
+		align-self: flex-end;
+		color: $purple;
+		width: 25px;
+		height: 25px;
+	}
+
+	&_Title {
+		@include transitionEffect(0.3s);
+		font-size: 20px;
+	}
+	&_Price {
+		font-size: 16px;
+	}
+
+	@include onHoverFocus {
+		color: $textBlack;
+		box-shadow: 0 0 17px 6px rgba(0, 0, 0, 0.15);
+	}
+}

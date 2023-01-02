@@ -1,0 +1,34 @@
+@import "../../assets/styles/mixins.scss";
+@import "../../assets/styles/palette.scss";
+
+.ShoppingBagPage {
+	@include siteSection;
+
+	> div {
+		@include displayFlex(space-between, unset);
+	}
+
+	@include mediaQuery("max", 1120px) {
+		> div {
+			flex-direction: column;
+		}
+	}
+}
+
+.CheckoutSec {
+	@include flex(0 0 300px);
+	@include displayFlex(unset, unset);
+	flex-direction: column;
+
+	div {
+		@include displayFlex(space-between, unset);
+	}
+
+	div:last-of-type {
+		font-size: 20px;
+	}
+
+	@include mediaQuery("max", 480px) {
+		margin-top: 30px;
+	}
+}
