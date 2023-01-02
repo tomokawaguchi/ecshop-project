@@ -23,7 +23,7 @@ const FeaturedProductsList = () => {
 
 				<div className={styles.FeaturedProductsList_BottomWrapper}>
 					{featuredProducts.length ? (
-						<Carousel controls={false} activeIndex={index} onSelect={handleSelect}>
+						<Carousel className="featured" controls={false} activeIndex={index} onSelect={handleSelect}>
 							{featuredProducts.map((product) => (
 								<Carousel.Item key={product.id}>
 									<Product data={product} dispatch={dispatch} />

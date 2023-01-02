@@ -30,20 +30,6 @@ const Nav = () => {
 			<NavLink to="/shopping-bag" className={bagIconNav.join(" ")}>
 				<IoBagHandleOutline />
 			</NavLink>
-
-			<button className={styles.Nav_Hamburger}>
-				<FiMenu />
-			</button>
-			<div className={styles.Mobile}>
-				<div className={styles.Mobile_Inner}>
-					<NavLink to="/" className={styles.Mobile_Nav}>
-						Home
-					</NavLink>
-					<NavLink to="/products" className={styles.Mobile_Nav}>
-						Products
-					</NavLink>
-				</div>
-			</div>
 		</nav>
 	);
 };

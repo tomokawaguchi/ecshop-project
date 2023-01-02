@@ -18,3 +18,15 @@ body.isMobileActive:after {
 	bottom: 0;
 	background-color: rgba(0, 0, 0, 0.4);
 }
+
+/* For the slider - Boostrap Carousel */
+.featured .carousel-indicators {
+	bottom: -60px !important;
+}
+
+.featured .carousel-indicators > button {
+	background-color: #323232 !important;
+	width: 6px !important;
+	height: 6px !important;
+	border-radius: 100% !important;
+}

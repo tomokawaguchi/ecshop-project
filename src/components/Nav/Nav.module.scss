@@ -34,42 +34,30 @@
 		@include onHoverFocus {
 			color: $purple;
 		}
-
-		@include mediaQuery("max", 580px) {
-			margin: 0 7px;
-
-			&_Text {
-				display: none;
-			}
-		}
 	}
 
-	&_Hamburger {
-		@include displayFlex(center, center);
-		display: none;
-		font-size: 22px;
-		color: $textBlack;
-		border: none;
-		background-color: transparent;
-		padding: 0;
-		margin-left: 10px;
+	@include mediaQuery("max", 580px) {
+		flex-wrap: wrap;
+		justify-content: flex-end;
 
-		@include mediaQuery("max", 580px) {
-			display: flex;
+		&_Link {
+			@include flex(0 0 70px);
+			margin-bottom: 10px;
+		}
+
+		&_Link_Active:after {
+			right: 20px;
+			top: 3px;
 		}
 	}
-}
+	@include mediaQuery("max", 420px) {
+		&_Link {
+			@include flex(0 0 60px);
+			margin-bottom: 10px;
+		}
 
-.Mobile {
-	display: none;
-
-	// @include mediaQuery("max", 580px) {
-	// 	@include displayFlex(unset, unset);
-	// 	position: absolute;
-	// 	width: 50%;
-	// 	right: 0;
-	// 	top: 0;
-	// 	bottom: 0;
-	// 	z-index: 1;
-	// }
+		&_Link_Active:after {
+			right: 15px;
+		}
+	}
 }
