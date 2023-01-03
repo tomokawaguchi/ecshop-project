@@ -37,7 +37,7 @@ const ShoppingBagPage = () => {
 			return;
 		}
 
-		await addProductToBag(...updatedProducts);
+		await addProductToBag(...updatedProducts); // error occurs when data is undefined - no item
 
 		// calculation for price total here
 		let calculateSubTotalPrice = updatedProducts.reduce((acc, current) => {

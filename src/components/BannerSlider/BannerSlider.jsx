@@ -28,7 +28,7 @@ const BannerSlider = () => {
 					<Carousel.Item>
 						<img className="d-block w-200" src={banner2} alt="Christmas socks" />
 						<Carousel.Caption className={styles.BannerSlider_Caption}>
-							<h2>Get Comfortable With Your favourites</h2>
+							<h2>Get Comfortable With Your favorites</h2>
 							<Button buttonText="Find Your Favourite" style="primary" linkPath="/products" />
 						</Carousel.Caption>
 					</Carousel.Item>

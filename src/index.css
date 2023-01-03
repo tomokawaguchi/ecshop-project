@@ -30,3 +30,23 @@ body.isMobileActive:after {
 	height: 6px !important;
 	border-radius: 100% !important;
 }
+
+/* For the slick slides spacing */
+.slick-slide {
+	margin: 10px 0;
+}
+.slick-slide > div {
+	margin: 0 10px;
+}
+.slick-list {
+	margin: 0 -10px;
+}
+
+/* For the slick arrow */
+.slick-next {
+	right: 5px !important;
+}
+.slick-prev {
+	left: 5px !important;
+	z-index: 2;
+}

@@ -8,7 +8,9 @@ import ProductPage from "./containers/ProductPage/ProductPage";
 import ProductDataProvider from "./context/ProductsDataContext";
 
 import styles from "./App.module.scss";
-import "bootstrap/dist/css/bootstrap.min.css";
+import "bootstrap/dist/css/bootstrap.css";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 
 const App = () => {
 	return (

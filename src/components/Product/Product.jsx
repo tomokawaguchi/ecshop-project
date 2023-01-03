@@ -16,7 +16,7 @@ const Product = ({ data, dispatch }) => {
 		const unsubscribe = productListener(id, dispatch);
 
 		// Remove the listener
-		() => unsubscribe();
+		return () => unsubscribe();
 	}, []);
 
 	// Handle wishlist button toggle function
