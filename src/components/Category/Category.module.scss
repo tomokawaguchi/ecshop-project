@@ -1,0 +1,49 @@
+@import "../../assets/styles/mixins.scss";
+@import "../../assets/styles/palette.scss";
+
+.Category {
+	@include transitionEffect(0.3s);
+	@include flex(0 0 32%);
+	@include displayFlex(unset, unset);
+	position: relative;
+	border-radius: 5px;
+	height: 200px;
+
+	&:after {
+		content: "";
+		position: absolute;
+		background-color: rgba(0, 0, 0, 0.4);
+		left: 0;
+		right: 0;
+		top: 0;
+		bottom: 0;
+		border-radius: 5px;
+		z-index: 0;
+	}
+
+	&_Thumbnail {
+		width: 100%;
+		height: 100%;
+	}
+
+	&_Title {
+		position: absolute;
+		color: $textWhite;
+		font-size: 24px;
+		left: 20px;
+		bottom: 20px;
+		z-index: 2;
+	}
+
+	@include onHoverFocus {
+		box-shadow: 0 0 12px 4px rgba(0, 0, 0, 0.15);
+	}
+
+	@include mediaQuery("max", 1040px) {
+		@include flex(0 0 46%);
+		margin-bottom: 20px;
+	}
+	@include mediaQuery("max", 600px) {
+		@include flex(100%);
+	}
+}

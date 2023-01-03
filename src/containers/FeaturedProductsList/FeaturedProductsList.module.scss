@@ -1,0 +1,19 @@
+@import "../../assets/styles/mixins.scss";
+@import "../../assets/styles/palette.scss";
+
+.FeaturedProductsListSec {
+	@include siteSection;
+}
+
+.FeaturedProductsList {
+	&_Title {
+		text-align: center;
+		margin-bottom: 50px;
+	}
+
+	> a {
+		@include displayFlex(center, center);
+		text-decoration: none;
+		margin-top: 50px;
+	}
+}

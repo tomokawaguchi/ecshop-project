@@ -1,0 +1,97 @@
+@import "../../assets/styles/mixins.scss";
+@import "../../assets/styles/palette.scss";
+
+.BannerSlider {
+	@include siteSection;
+
+	> div {
+		padding: 40px 0;
+	}
+
+	&_Caption {
+		width: 550px;
+		text-align: right !important;
+		top: 25%;
+		right: 100px !important;
+		bottom: unset !important;
+		left: unset !important;
+		padding: 0;
+
+		> h2 {
+			font-size: 60px;
+		}
+
+		&_Break {
+			display: block;
+		}
+	}
+
+	&_Caption:nth-of-type(2) {
+		width: 540px;
+		text-align: left !important;
+		left: 0 !important;
+		right: unset !important;
+	}
+
+	img {
+		width: 100%;
+	}
+
+	@include mediaQuery("max", 1185px) {
+		&_Caption {
+			top: 15%;
+		}
+	}
+	@include mediaQuery("max", 1075px) {
+		padding: 0;
+
+		> div {
+			padding-top: 0;
+		}
+
+		&_Caption {
+			width: 460px;
+
+			> h2 {
+				font-size: 48px;
+			}
+		}
+	}
+	@include mediaQuery("max", 820px) {
+		&_Caption {
+			width: 100% !important;
+			text-align: center !important;
+			top: 15%;
+			right: unset !important;
+			bottom: unset !important;
+			left: unset !important;
+			padding: 0;
+
+			> h2 {
+				font-size: 36px;
+				width: 80%;
+				margin: 0 auto;
+			}
+		}
+	}
+	@include mediaQuery("max", 640px) {
+		img {
+			height: 460px !important;
+		}
+
+		&_Caption {
+			top: 20%;
+		}
+	}
+	@include mediaQuery("max", 480px) {
+		img {
+			height: 400px !important;
+		}
+
+		&_Caption {
+			> h2 {
+				font-size: 28px;
+			}
+		}
+	}
+}

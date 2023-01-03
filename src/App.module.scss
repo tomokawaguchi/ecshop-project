@@ -1,0 +1,13 @@
+@import "./assets/styles/mixins.scss";
+@import "./assets/styles/palette.scss";
+
+.Footer {
+	@include displayFlex(center, center);
+	font-size: 12px;
+	background-color: $purple;
+	padding: 10px 0;
+
+	> span {
+		color: $textWhite;
+	}
+}

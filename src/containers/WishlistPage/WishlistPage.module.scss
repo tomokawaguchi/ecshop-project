@@ -1,0 +1,6 @@
+@import "../../assets/styles/mixins.scss";
+@import "../../assets/styles/palette.scss";
+
+.wishlistProducts {
+	@include siteSection;
+}

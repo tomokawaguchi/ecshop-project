@@ -1,0 +1,101 @@
+@import "../../assets/styles/mixins.scss";
+@import "../../assets/styles/palette.scss";
+
+.ShoppingBagItem {
+	@include displayFlex(unset, unset);
+	border-bottom: 1px solid $styleGray;
+	padding: 20px 0 60px;
+
+	// Column 1
+	&_Col2 {
+		@include flex(0 0 200px);
+	}
+	&_Thumbnail {
+		width: 200px;
+		height: 200px;
+	}
+
+	// Column 2
+	&_Col2 {
+		@include flex(auto);
+		@include displayFlex(space-between, unset);
+		padding-left: 30px;
+	}
+
+	&_TextsWrapper {
+		@include displayFlex(unset, unset);
+		flex-direction: column;
+		padding-right: 30px;
+
+		h3 {
+			font-size: 18px;
+			margin-bottom: 20px;
+		}
+
+		p {
+			font-size: 16px;
+		}
+	}
+	&_RemoveBtn {
+		display: inline-flex;
+		text-decoration: underline;
+		background-color: transparent;
+		border: none;
+		padding: 0;
+	}
+
+	&_PriceQtyWrapper {
+		@include displayFlex(unset, flex-end);
+		flex-direction: column;
+		padding-right: 60px;
+
+		p {
+			font-size: 18px;
+		}
+	}
+
+	@include mediaQuery("max", 720px) {
+		position: relative;
+
+		&_RemoveBtn {
+			position: absolute;
+			left: 0;
+			bottom: 20px;
+		}
+
+		&_Col2 {
+			flex-direction: column;
+		}
+
+		&_TextsWrapper {
+			align-items: flex-end;
+			padding-right: 0;
+		}
+
+		&_PriceQtyWrapper {
+			padding: 0;
+		}
+	}
+
+	@include mediaQuery("max", 480px) {
+		flex-direction: column;
+
+		&_Thumbnail {
+			width: 200px;
+			height: 200px;
+		}
+
+		&_Col2 {
+			padding-left: 0;
+			margin-top: 30px;
+		}
+
+		&_TextsWrapper {
+			align-items: flex-start;
+		}
+
+		&_PriceQtyWrapper {
+			align-items: flex-start;
+		}
+	}
+}
