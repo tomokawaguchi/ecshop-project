@@ -1,5 +1,10 @@
 # E-Commerce Socks Shop Project
 
+The site is available at https://ecshop.tomok.dev
+
+
+*Please note that this is a mock e-commerce site and all of the images used come from https://burst.shopify.com/socks*
+
 This is a mock e-commerce site built in ReactJS where you can browse socks as shop products. The products data is managed in Firestore with 2 main collections: 'products' and 'shoppingBag'. The 'products' collection holds all the products available in the store and 'shoppingBag' collection is used to manage the shopping cart items. Both data are retrieved and updated in the Context with the useReducer Hook.
 
 ### Some featured functionalities are:
