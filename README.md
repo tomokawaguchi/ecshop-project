@@ -2,7 +2,8 @@
 
 The site is available at https://ecshop.tomok.dev
 
-![project snapshot](https://github.com/tomokawaguchi/ecshop-project/blob/main/src/assets/project-snapshot.png?raw=true)
+<img src="https://github.com/tomokawaguchi/ecshop-project/blob/main/src/assets/project-snapshot.png" width="auto" height="400" />
+
 
 *Please note that this is a mock e-commerce site and all of the images used come from https://burst.shopify.com/socks*
 
