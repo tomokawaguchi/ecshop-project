@@ -43,7 +43,7 @@ This is a mock e-commerce site built in ReactJS where you can browse socks as sh
 
 Some of the featured functionalities are:
 
-**1. Wishlist page and toggle heart button on the product**
+**1. Wishlist page and toggle heart button on the product**  
 The wishlist page showcase the products that are marked as wished by the user. It updates live time aligned with user interaction so if you like the item on the product page and go to wishlist page, the item should be appearing there. This was achieved by a simple state management.
 
 **2. Products data management & items data to the Cart**  
